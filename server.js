@@ -47,6 +47,22 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects",
+    link1: "http://savetochi.github.io",
+    link2: "http://savetochi.github.io/hackernews-clone",
+    link3: "http://savetochi.github.io/Natours",
+    link4: "http://savetochi.github.io/Nexter",
+    link5: "http://savetochi.github.io/Notes-application",
+    project1: "Portfolio",
+    project2: "HackerNews",
+    project3: "Natours",
+    project4: "Nexter",
+    project5: "Notes app"
+  });
+});
+
 // /bad - send back json with errorMessage
 app.get("/bad", (req, res) => {
   res.send({
